@@ -19,7 +19,7 @@ function Services() {
         <div className="flex justify-center gap-2 items-center">
           <h1 className="text-3xl md:text-4xl font-bold">Our Services</h1>
         </div>
-        <p className="text-base md:text-lg lg:text-xl text-gray-400 mt-4 max-w-2xl mx-auto px-5">
+        <p className="text-base md:text-lg lg:text-xl text-gray-400 mt-4 max-w-2xl mx-auto  px-5">
           We provide end-to-end solutions to help businesses and startups build,
           launch, and market their products with cutting-edge technology.
         </p>
