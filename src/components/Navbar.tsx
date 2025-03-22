@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import { Button } from "./ui/button";
-import { Calendar, Menu, X } from "lucide-react";
+
+import { Menu, X } from "lucide-react";
+import BookACall from "./BookACall";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -36,12 +37,10 @@ function Navbar() {
           >
             Services
           </li>
-          <a href="https://cal.com/isonikrish/book" target="_blank" rel="noopener noreferrer">
-            <Button className="ml-4 flex items-center gap-2">
-              <Calendar size={16} />
-              Book a Call
-            </Button>
-          </a>
+          <li className="px-4">
+            <BookACall paddingX={4} paddingY={4} textSize={"md"} />
+          </li>
+
         </ul>
       </div>
       <div className="md:hidden">
@@ -50,7 +49,7 @@ function Navbar() {
         </button>
       </div>
       {menuOpen && (
-        <div className="absolute top-16 left-0 w-full bg-black/80 backdrop-blur-md p-6 md:hidden">
+        <div className="absolute top-16 left-0 w-full bg-black/90 backdrop-blur-lg p-6 md:hidden border-b-4">
           <ul className="flex flex-col gap-4 items-center text-white">
             <li className="cursor-pointer hover:underline border-b w-full py-3" onClick={() => scrollToSection("products")}>
               Our Products
@@ -58,12 +57,10 @@ function Navbar() {
             <li className="cursor-pointer hover:underline border-b w-full py-3" onClick={() => scrollToSection("services")}>
               Services
             </li>
-            <a href="https://cal.com/isonikrish/book" target="_blank" rel="noopener noreferrer" className="w-full">
-              <Button className="flex items-center gap-2">
-                <Calendar size={16} />
-                Book a Call
-              </Button>
-            </a>
+
+            <li className="w-full">
+              <BookACall paddingX={4} paddingY={4} textSize={"md"} />
+            </li>
           </ul>
         </div>
       )}
