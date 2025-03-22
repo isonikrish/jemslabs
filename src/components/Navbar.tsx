@@ -18,7 +18,8 @@ function Navbar() {
   return (
     <nav className="w-full fixed top-0 left-0 right-0 px-6 md:px-10 py-3 border-b flex items-center justify-between shadow-md z-50 bg-black/50 backdrop-blur-md">
       <div className="cursor-pointer" onClick={() => scrollToSection("hero")}>
-        <Image src="/logo1.png" alt="logo" width={50} height={60} />
+        <Image src="/logo1.png" alt="logo" width={120}
+          height={60} />
       </div>
 
       <div className="hidden md:flex items-center gap-4">

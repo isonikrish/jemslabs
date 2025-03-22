@@ -1,13 +1,12 @@
 import Image from "next/image";
 import { FaXTwitter, FaYoutube, FaGithub } from "react-icons/fa6";
-import { SiPeerlist } from "react-icons/si";
 
 function Footer() {
   return (
     <div className="px-6 py-10 border-t-4 bg-black">
       <div className="pb-6 flex flex-col md:flex-row justify-between items-center">
         <Image
-          src="/logo2.png"
+          src="/logo1.png"
           alt="logo"
           width={140}
           height={60}
@@ -21,14 +20,6 @@ function Footer() {
             className="hover:text-gray-400 transition"
           >
             <FaGithub className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
-          </a>
-          <a
-            href="https://peerlist.io/jemslabs"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-gray-400 transition"
-          >
-            <SiPeerlist className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
           </a>
           <a
             href="https://www.youtube.com/@JemsLabs"
