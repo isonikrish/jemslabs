@@ -14,7 +14,7 @@ function OurProducts() {
                 </p>
             </div>
 
-            <div className="py-10 grid grid-cols-1 place-items-center">
+            <div className="py-10 grid grid-cols-1 place-items-center gap-2">
                 {products?.map((product, index: number) => (
                     <Product
                         image={product.image}
