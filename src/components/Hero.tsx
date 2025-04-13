@@ -1,12 +1,13 @@
-
 import { Orbitron } from "next/font/google";
 import React from "react";
 import BookACall from "./BookACall";
+import Link from "next/link";
+import { Rocket } from "lucide-react";
 
 const cosmicOcto = Orbitron({
   subsets: ["latin"],
   weight: ["700", "900"],
-  variable: "--font-cosmic-octo",
+  variable: "--font-cosmic-o",
 });
 
 function Hero() {
@@ -20,20 +21,25 @@ function Hero() {
 
       <div className="relative flex flex-col items-center justify-center space-y-8">
         <h1 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white font-bold text-center">
-          <span className="text-left">
-            BUILD. LAUNCH. MARKET.
-          </span>
+          <span className="text-left">BUILD. LAUNCH. MARKET.</span>
         </h1>
-
-
 
         <p className="text-xl sm:text-lg md:text-xl lg:text-2xl opacity-90 font-light leading-relaxed max-w-3xl text-gray-300">
           We build, launch, and market high-quality MVPs, transforming ideas into
           successful products.
         </p>
+        <div className="flex flex-col lg:flex-row gap-4 items-center">
+          <BookACall paddingX={6} paddingY={6} textSize={"lg"} />
+          <Link
+            href="/launchpad"
+            className="inline-flex items-center text-lg font-semibold text-white border-b-2 border-transparent border-white transition-all"
+          >
+            Go to Launchpad <Rocket className="ml-2 text-white" />
+          </Link>
+        </div>
 
-        <BookACall paddingX={8} paddingY={6} textSize={"lg"}/>
-      </div>  
+
+      </div>
     </div>
   );
 }
