@@ -71,7 +71,7 @@ export default function LaunchpadSection() {
             <span>Launchpad</span>
           </h2>
           <p className="max-w-2xl mx-auto mt-6 text-xl font-light tracking-wide text-gray-400">
-            Startup ideas from our mind, waiting to be built. Founders, let's team up.
+            Startup ideas from our mind, waiting to be built. Founders, let&apsos;s team up.
           </p>
         </div>
 
@@ -125,7 +125,7 @@ export default function LaunchpadSection() {
                     <div className="mt-auto">
                       <Button className="px-0 h-auto bg-transparent text-white hover:bg-transparent" onClick={handleButtonClick}>
                         <span className="mr-2 text-lg font-bold border-b-2 border-current">
-                          Let's Build This
+                          Let&apos;s Build This
                         </span>
                         <ArrowUpRight className="w-5 h-5" />
                       </Button>
