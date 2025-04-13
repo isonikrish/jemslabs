@@ -71,7 +71,7 @@ export default function LaunchpadSection() {
             <span>Launchpad</span>
           </h2>
           <p className="max-w-2xl mx-auto mt-6 text-xl font-light tracking-wide text-gray-400">
-            Startup ideas from our mind, waiting to be built. Founders, let&apsos;s team up.
+            Startup ideas from our mind, waiting to be built. Founders, let&apos;s team up.
           </p>
         </div>
 
