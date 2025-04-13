@@ -18,9 +18,13 @@ function Product({
           <div className="absolute inset-0 bg-gradient-to-t from-black via-gray-900/50 to-transparent" />
           
           <div className="absolute bottom-0 left-0 w-full p-4 flex justify-between items-center">
-            <p className="text-lg mt-1 font-bold">{description}</p>
-
-            <ExternalLink size={20} className="text-white opacity-100 hover:opacity-100 transition" />
+            <p className="text-lg mt-1 font-bold mr-4 flex-1">
+              {description}
+            </p>
+            <ExternalLink
+              size={20}
+              className="text-white opacity-100 hover:opacity-100 transition flex-shrink-0"
+            />
           </div>
         </div>
       </a>

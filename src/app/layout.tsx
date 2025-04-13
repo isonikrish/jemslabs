@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import {GoogleAnalytics} from '@next/third-parties/google'
+import { GoogleAnalytics } from '@next/third-parties/google'
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -83,12 +83,16 @@ export default function RootLayout({
         <meta name="twitter:description" content="Transform your startup ideas into successful products with Jems Labs. We build, launch, and market high-quality MVPs with cutting-edge technology." />
         <meta name="twitter:image" content="https://jemslabs.xyz/og-image.png" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} `}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen flex flex-col`}
+      >
         <Navbar />
-        <div>{children}</div>
+        <main className="flex-1">
+          {children}
+        </main>
         <Footer />
       </body>
-      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS!}/>
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS!} />
     </html>
   );
 }
