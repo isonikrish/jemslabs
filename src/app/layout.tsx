@@ -1,19 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Raleway, Lora } from "next/font/google";
+
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { GoogleAnalytics } from '@next/third-parties/google'
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+import { GoogleAnalytics } from '@next/third-parties/google';
+const raleway = Raleway({
   subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
 });
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const lora = Lora({
   subsets: ["latin"],
-});
-
+  variable: "--font-serif",
+  display: "swap",
+})
 export const metadata: Metadata = {
   title: "Jems Labs - Build, Launch, and Market Your MVP",
   description: "Jems Labs helps startups and businesses transform ideas into successful products by building, launching, and marketing high-quality MVPs with cutting-edge technology and proven growth strategies.",
@@ -63,10 +64,7 @@ export const metadata: Metadata = {
     images: ["https://jemslabs.xyz/og-image.png"],
   },
   metadataBase: new URL("https://jemslabs.xyz"),
-
 };
-
-
 
 export default function RootLayout({
   children,
@@ -83,9 +81,7 @@ export default function RootLayout({
         <meta name="twitter:description" content="Transform your startup ideas into successful products with Jems Labs. We build, launch, and market high-quality MVPs with cutting-edge technology." />
         <meta name="twitter:image" content="https://jemslabs.xyz/og-image.png" />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-screen flex flex-col`}
-      >
+      <body className={`${raleway.variable} ${lora.variable} min-h-screen flex flex-col font-raleway`}>
         <Navbar />
         <main className="flex-1">
           {children}
