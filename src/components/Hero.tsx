@@ -1,32 +1,64 @@
 import React from "react";
-import { ChevronRight} from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
 
 function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex flex-col items-center justify-center text-center min-h-screen w-full px-6 md:px-12 py-20 overflow-hidden bg-background"
-    >
-      <div className="absolute inset-0 bg-grid-small opacity-15 pointer-events-none z-0" />
-      <div className="relative z-10 flex flex-col items-center justify-center space-y-6 px-4 text-center">
-        <div className="inline-flex items-center px-4 py-2 bg-white/5 rounded-full border border-white/10 backdrop-blur-md">
-          <div className="w-2 h-2 bg-neutral-300 rounded-full mr-3 animate-pulse" />
-          <span className="text-sm text-gray-400">Building the future, one product at a time</span>
-        </div>
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-snug sm:leading-tight tracking-tight text-white max-w-4xl">
-          We build and grow <br />
-          <span className="font-lora font-normal italic text-gray-400">
-            tech products
+      className="relative flex flex-col items-center justify-center text-center min-h-screen w-full px-6 md:px-12 py-24 bg-background overflow-hidden">
+      {/* Subtle grid background */}
+      <div className="absolute inset-0 bg-grid-small opacity-10 pointer-events-none z-0" />
+
+      {/* Left floating orb */}
+      <div className="absolute left-[-100px] top-[20%] w-72 h-72 bg-blue-500 opacity-20 rounded-full blur-3xl z-0" />
+      {/* Right floating orb */}
+      <div className="absolute right-[-100px] top-[60%] w-72 h-72 bg-green-400 opacity-20 rounded-full blur-3xl z-0" />
+
+      {/* <div className="hidden lg:block absolute right-10 top-[40%] w-80 p-4 rounded-xl bg-white/5 border border-white/10 text-left text-gray-300 backdrop-blur-md shadow-lg z-10 animate-fade-in">
+        <p className="text-sm italic">“Jems Labs helped us turn our idea into a live product in just 4 weeks.”</p>
+        <span className="mt-2 block text-xs text-gray-400">— Startup Founder</span>
+      </div> */}
+
+      <div className="relative z-10 flex flex-col items-center justify-center space-y-6 text-center animate-fade-up">
+        <div className="inline-flex items-center px-4 py-2 bg-white/5 rounded-full border border-white/10 backdrop-blur-md shadow-md">
+          <div className="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse" />
+          <span className="text-sm text-gray-300">
+            Available for new projects
           </span>
+        </div>
+
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-white max-w-5xl leading-tight">
+          We{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 hover:animate-pulse">
+            build
+          </span>{" "}
+          your MVP <br />
+          and{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400 hover:animate-pulse">
+            grow
+          </span>{" "}
+          it for you
         </h1>
-        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 font-light leading-relaxed max-w-2xl">
-          From idea to market — we help founders build, launch, and scale real products that make an impact.
+
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 font-light max-w-2xl leading-relaxed">
+          Got an idea? We'll turn it into a real product.<br />
+          From idea to launch and early user growth.
         </p>
 
-        <div className="flex items-center pt-2">
-          <Button size="lg">
-            Book a call <ChevronRight className="ml-2 h-4 w-4" />
+        <div className="flex flex-wrap items-center justify-center pt-6 gap-4">
+          <Button
+            size="lg"
+            className="font-semibold flex items-center gap-2 transition-transform hover:scale-105 active:scale-95"
+          >
+            Book a Free Call <ChevronRight className="h-4 w-4" />
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            className=" hover:border-white/20 hover:bg-white/5 transition-transform hover:scale-105 active:scale-95"
+          >
+            View Our Work <ChevronRight className="h-4 w-4" />
           </Button>
         </div>
       </div>

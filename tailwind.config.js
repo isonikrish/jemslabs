@@ -12,9 +12,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        raleway: ["var(--font-sans)", "sans-serif"],
-        lora: ["var(--font-serif)", "serif"],
-      },
+            sans: ['var(--font-sans)'],
+                },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

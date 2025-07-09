@@ -1,20 +1,18 @@
 import type { Metadata } from "next";
-import { Raleway, Lora } from "next/font/google";
 
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { GoogleAnalytics } from '@next/third-parties/google';
-const raleway = Raleway({
+import { Urbanist } from "next/font/google";
+
+const urbanist = Urbanist({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-sans",
   display: "swap",
 });
-const lora = Lora({
-  subsets: ["latin"],
-  variable: "--font-serif",
-  display: "swap",
-})
+
 export const metadata: Metadata = {
   title: "Jems Labs - Build, Launch, and Market Your MVP",
   description: "Jems Labs helps startups and businesses transform ideas into successful products by building, launching, and marketing high-quality MVPs with cutting-edge technology and proven growth strategies.",
@@ -81,11 +79,11 @@ export default function RootLayout({
         <meta name="twitter:description" content="Transform your startup ideas into successful products with Jems Labs. We build, launch, and market high-quality MVPs with cutting-edge technology." />
         <meta name="twitter:image" content="https://jemslabs.xyz/og-image.png" />
       </head>
-      <body className={`${raleway.variable} ${lora.variable} min-h-screen flex flex-col font-raleway`}>
+      <body className={`${urbanist.variable}  min-h-screen flex flex-col font-sans`}>
         <Navbar />
         <main className="flex-1">
-          {children}
-        </main>
+  {children}
+</main>
         <Footer />
       </body>
       <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS!} />

@@ -10,7 +10,7 @@ import {
 function Services() {
   return (
     <div
-      className="relative border-t-4 min-h-screen w-full py-16 text-center bg-black text-white"
+      className="relative border-t min-h-screen w-full py-16 text-center bg-black text-white"
       id="services"
     >
       <div className="absolute inset-0 bg-dots-small opacity-20 pointer-events-none"></div>

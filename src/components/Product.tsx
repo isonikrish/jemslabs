@@ -5,30 +5,37 @@ function Product({
   image,
   liveLink,
   description,
+  title,
 }: {
   image: StaticImageData;
   liveLink: string;
   description: string;
+  title: string;
 }) {
   return (
-    <div className="border rounded-xl w-11/12 sm:w-3/4 md:w-1/2 bg-black text-white shadow-xl hover:shadow-2xl transition-shadow duration-300 overflow-hidden relative">
-      <a href={liveLink} target="_blank" rel="noopener noreferrer">
-        <div className="w-full h-64 sm:h-80 md:h-96 overflow-hidden relative">
-          <Image src={image} alt="product-img" className="object-cover w-full h-full" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-gray-900/50 to-transparent" />
-          
-          <div className="absolute bottom-0 left-0 w-full p-4 flex justify-between items-center">
-            <p className="text-lg mt-1 font-bold mr-4 flex-1">
-              {description}
-            </p>
-            <ExternalLink
-              size={20}
-              className="text-white opacity-100 hover:opacity-100 transition flex-shrink-0"
-            />
-          </div>
+    <a
+      href={liveLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group block bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden transition-all hover:shadow-lg"
+    >
+      <div className="relative w-full h-60 sm:h-72 md:h-80">
+        <Image
+          src={image}
+          alt={`${title} image`}
+          className="object-cover w-full h-full"
+        />
+
+        <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent px-4 py-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <p className="text-sm text-gray-200">{description}</p>
         </div>
-      </a>
-    </div>
+      </div>
+
+      <div className="flex items-center justify-between px-4 py-4">
+        <h3 className="text-white font-medium text-base">{title}</h3>
+        <ExternalLink className="text-gray-400 group-hover:text-white transition" size={18} />
+      </div>
+    </a>
   );
 }
 

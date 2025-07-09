@@ -3,24 +3,22 @@ import { products } from "@/lib/products";
 
 function OurProducts() {
     return (
-        <div className="border-t-4 min-h-screen w-full py-16 text-center" id="products">
-            <div>
-                <div className="flex justify-center gap-2 items-center">
-                    <h1 className="text-4xl md:text-5xl font-bold">Our Products</h1>
-                </div>
-                <p className="text-base sm:text-lg md:text-xl text-gray-300 mt-4 max-w-2xl mx-auto px-5">
-                    Explore our innovative products designed to help businesses and
-                    startups build, scale, and succeed with cutting-edge technology.
+        <div className="min-h-screen border-t w-full py-20 text-center" id="products">
+            <div className="mb-10 px-4">
+                <h1 className="text-3xl md:text-4xl font-bold">Our Products</h1>
+                <p className="text-base md:text-lg lg:text-xl text-gray-400 mt-4 max-w-2xl mx-auto  px-5">
+                    Explore our innovative products designed to help businesses and startups build, scale, and succeed with cutting-edge technology.
                 </p>
             </div>
 
-            <div className="py-10 grid grid-cols-1 place-items-center gap-2">
-                {products?.map((product, index: number) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6 max-w-6xl mx-auto">
+                {products.map((product, index) => (
                     <Product
-                        image={product.image}
-                        liveLink={product.liveLink}
-                        description={product.description}
                         key={index}
+                        image={product.image}
+                        title={product.title}
+                        description={product.description}
+                        liveLink={product.liveLink}
                     />
                 ))}
             </div>
