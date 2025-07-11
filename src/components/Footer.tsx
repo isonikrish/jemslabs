@@ -3,8 +3,11 @@ import { FaXTwitter, FaYoutube, FaGithub } from "react-icons/fa6";
 
 function Footer() {
   return (
-    <div className="px-6 py-10 border-t-4 bg-black">
-      <div className="pb-6 flex flex-col md:flex-row justify-between items-center">
+    <footer className="relative w-full border-t border-white/10 bg-black/80 backdrop-blur-md text-white px-6 py-12 overflow-hidden">
+      <div className="absolute left-[-100px] top-[30%] w-72 h-72 bg-blue-500 opacity-10 rounded-full blur-3xl z-0" />
+      <div className="absolute right-[-100px] top-[70%] w-72 h-72 bg-green-400 opacity-10 rounded-full blur-3xl z-0" />
+
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 max-w-6xl mx-auto">
         <Image
           src="/logo1.png"
           alt="logo"
@@ -12,38 +15,49 @@ function Footer() {
           height={60}
           className="object-contain cursor-pointer"
         />
-        <div className="flex gap-4 sm:gap-6 mt-4 md:mt-0">
+
+        <div className="flex gap-6">
           <a
             href="https://github.com/Jems-Labs"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-gray-400 transition"
+            className="text-gray-400 hover:text-white transition"
           >
-            <FaGithub className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
+            <FaGithub className="w-6 h-6" />
           </a>
           <a
             href="https://www.youtube.com/@JemsLabs"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-gray-400 transition"
+            className="text-gray-400 hover:text-white transition"
           >
-            <FaYoutube className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
+            <FaYoutube className="w-6 h-6" />
           </a>
           <a
             href="https://x.com/jems_labs"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-gray-400 transition"
+            className="text-gray-400 hover:text-white transition"
           >
-            <FaXTwitter className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
+            <FaXTwitter className="w-6 h-6" />
           </a>
         </div>
       </div>
 
-      <div className="text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 pt-4 border-t">
-        &copy; 2025 <span className="flex items-center gap-1">Jems Labs.</span> All rights reserved.
+      <div className="relative z-10 mt-6 text-center text-sm text-gray-300">
+        Have a question?{" "}
+        <a
+          href="mailto:labsjems@gmail.com"
+          className="text-green-400 hover:text-white underline transition"
+        >
+          labsjems@gmail.com
+        </a>
       </div>
-    </div>
+
+      <div className="relative z-10 mt-8 text-center text-sm text-gray-400 border-t border-white/10 pt-6">
+        &copy; 2025 <span className="text-white font-semibold">Jems Labs</span>. All rights reserved.
+      </div>
+    </footer>
   );
 }
 

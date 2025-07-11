@@ -1,32 +1,26 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Calendar } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { sendGAEvent } from "@next/third-parties/google";
-import { useRouter } from "next/navigation";
 
-function BookACall({ paddingX, paddingY, textSize }: { paddingX: number, paddingY: number, textSize: string }) {
-    const router = useRouter();
+function BookACall({ isDefault, size, isFull }: { isDefault: boolean, size: "default" | "sm" | "lg" | "icon" , isFull:boolean}) {
 
     const handleButtonClick = () => {
-
         sendGAEvent("click", {
             event_category: "Engagement",
-            event_label: "Book a Call",
+            event_label: "Book a Free Call",
             value: 1,
         });
+
         setTimeout(() => {
-            router.push("https://cal.com/isonikrish/book");
+            window.open("https://cal.com/isonikrish/book", "_blank");
         }, 500);
     };
 
+
     return (
-        <Button
-            className={`px-${paddingX} py-${paddingY} text-${textSize} font-semibold rounded-md flex items-center space-x-1`}
-            onClick={handleButtonClick}>
-            <Calendar className="w-5 h-5" />
-            <span>Book a Call</span>
-        </Button>
+        <Button onClick={handleButtonClick} variant={isDefault ? "default" : "outline"} size={size} className={`group ${isFull ? "w-full": ""} ${isDefault ? "" : "text-white"}`}>Book a Free Call <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" /></Button>
     );
 }
 
