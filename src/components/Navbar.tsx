@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { ChevronRight, Menu, X } from "lucide-react";
-import { Button } from "./ui/button";
+import { Menu, X } from "lucide-react";
+import BookACall from "./BookACall";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -45,13 +45,15 @@ function Navbar() {
 
   return (
     <nav
-      className={`
-    fixed top-2 left-10 right-10 z-50 rounded-xl
-    transition-all duration-500 ease-in-out
-    ${scrolled ? "bg-black/90 text-white shadow-md backdrop-blur-lg translate-y-0 opacity-100 border" : "bg-transparent translate-y-2 opacity-90"}
-  `}
-    >
-      <div className="max-w-7xl mx-auto px-6 md:px-10 py-4 flex items-center justify-between">
+     className={`fixed top-2 z-50 rounded-xl transition-all duration-500 ease-in-out ${
+      scrolled
+        ? "left-4 right-4 md:left-24 md:right-24 lg:left-56 lg:right-56 bg-black/60 text-white shadow-md backdrop-blur-lg border"
+        : "left-4 right-4 md:left-8 md:right-8 bg-transparent"
+    }`}>
+
+      <div className="w-full flex items-center justify-between transition-all duration-300 px-4 md:px-6 py-3">
+
+
         <div className="cursor-pointer" onClick={() => scrollToSection("hero")}>
           <Image src="/logo1.png" alt="logo" width={120} height={60} />
         </div>
@@ -60,12 +62,13 @@ function Navbar() {
           <ul className="flex items-center font-medium">
             <li className="cursor-pointer px-4 hover:underline" onClick={() => scrollToSection("products")}>Products</li>
             <li className="cursor-pointer px-4 hover:underline" onClick={() => scrollToSection("services")}>Services</li>
-            <li className="cursor-pointer px-4 hover:underline" onClick={() => scrollToSection("services")}>Pricing</li>
+            <li className="cursor-pointer px-4 hover:underline" onClick={() => scrollToSection("pricing")}>Pricing</li>
+            <li className="cursor-pointer px-4 hover:underline" onClick={() => scrollToSection("opensource")}>Open Source</li>
           </ul>
         </div>
 
         <div className="hidden md:flex items-center">
-          <Button>Book a Free Call <ChevronRight /></Button>
+          <BookACall isDefault={true} size="default" isFull={false}/>
         </div>
 
         <div className="md:hidden">
@@ -76,12 +79,13 @@ function Navbar() {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden w-full bg-black/90 backdrop-blur-lg p-6 border-t border-white/10">
+        <div className="md:hidden w-full bg-black/50 backdrop-blur-lg p-6 border-t border-white/10">
           <ul className="flex flex-col gap-4 items-center text-white">
             <li className="cursor-pointer hover:underline border-b w-full py-3" onClick={() => scrollToSection("products")}>Products</li>
             <li className="cursor-pointer hover:underline border-b w-full py-3" onClick={() => scrollToSection("services")}>Services</li>
-            <li className="cursor-pointer hover:underline border-b w-full py-3" onClick={() => scrollToSection("services")}>Pricing</li>
-            <li className="w-full"><Button className="w-full justify-between">Book a Free Call <ChevronRight /></Button></li>
+            <li className="cursor-pointer hover:underline border-b w-full py-3" onClick={() => scrollToSection("pricing")}>Pricing</li>
+            <li className="cursor-pointer hover:underline border-b w-full py-3" onClick={() => scrollToSection("opensource")}>Open Source</li>
+            <li className="w-full"><BookACall isDefault={true} size="default" isFull={false}/></li>
           </ul>
         </div>
       )}

@@ -9,119 +9,94 @@ import {
 
 function Services() {
   return (
-    <div
-      className="relative border-t min-h-screen w-full py-16 text-center bg-black text-white"
+    <section
       id="services"
+      className="relative border-t min-h-screen w-full py-24 px-6 md:px-12 bg-background text-white text-center overflow-hidden"
     >
-      <div className="absolute inset-0 bg-dots-small opacity-20 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-dots-small opacity-10 pointer-events-none z-0" />
+      <div className="absolute left-[-100px] top-[30%] w-72 h-72 bg-blue-500 opacity-20 rounded-full blur-3xl z-0" />
+      <div className="absolute right-[-100px] top-[70%] w-72 h-72 bg-green-400 opacity-20 rounded-full blur-3xl z-0" />
 
-      <div className="relative">
-        <div className="flex justify-center gap-2 items-center">
-          <h1 className="text-3xl md:text-4xl font-bold">Our Services</h1>
-        </div>
-        <p className="text-base md:text-lg lg:text-xl text-gray-400 mt-4 max-w-2xl mx-auto  px-5">
-          We provide end-to-end solutions to help businesses and startups build,
-          launch, and market their products with cutting-edge technology.
+      <div className="relative z-10">
+        <h1 className="text-3xl md:text-4xl font-bold">Our Services</h1>
+        <p className="text-base md:text-lg lg:text-xl text-gray-400 mt-4 max-w-2xl mx-auto">
+          From product design to AI to user acquisition - we help founders build and grow with speed, clarity, and modern execution.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-10 mt-10 relative">
-        <div className="p-6 text-left rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-          <p className="text-gray-400 font-semibold text-lg md:text-xl border-b py-2">
-            1. Build
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 max-w-6xl mx-auto relative z-10">
+        <div className="bg-white/5 border border-white/10 backdrop-blur-lg p-8 text-left rounded-2xl hover:border-white/20 shadow-md hover:shadow-2xl transition duration-300">
+          <p className="text-cyan-400 font-semibold text-lg md:text-xl border-b border-white/10 pb-2">
+            Build
           </p>
-          <h2 className="text-xl md:text-2xl font-bold mt-2">
-            End-to-End Application Development
+          <h2 className="text-xl md:text-2xl font-bold mt-3 text-white">
+            Product Development
           </h2>
-          <Accordion type="single" collapsible className="w-full mt-4">
+          <Accordion type="multiple" className="w-full mt-6 space-y-2">
             <AccordionItem value="product-design">
               <AccordionTrigger>Product Design</AccordionTrigger>
               <AccordionContent>
-                We create intuitive, user-friendly, and visually stunning UI/UX
-                designs to enhance user experience and engagement.
+                Crafting modern UI/UX that your users will actually enjoy using — from wireframes to high-fidelity design.
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="fullstack-dev">
-              <AccordionTrigger>Website Development</AccordionTrigger>
+            <AccordionItem value="web-app-dev">
+              <AccordionTrigger>Web & App Development</AccordionTrigger>
               <AccordionContent>
-                Our team builds high-performance web applications with scalable
-                and robust architectures.
+                Full stack web & mobile apps built with modern frameworks like Next.js, React Native, Hono, and more.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="ai-integration">
-              <AccordionTrigger>AI Integration</AccordionTrigger>
+              <AccordionTrigger>AI + Agentic Systems</AccordionTrigger>
               <AccordionContent>
-                AI-powered solutions tailored to your business.
+                Integrate OpenAI, Gemini, or custom AI models into your product — from chatbots to task automation using agents.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="infra-hosting">
+              <AccordionTrigger>Cloud Hosting & Infra</AccordionTrigger>
+              <AccordionContent>
+                Deploy fast, secure, and scalable infrastructure with Vercel, Cloudflare, AWS, Supabase, or your stack of choice.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
         </div>
 
-        <div className="p-6 text-left rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-          <p className="text-gray-400 font-semibold text-lg md:text-xl border-b py-2">
-            2. Launch
+        {/* Grow Section */}
+        <div className="bg-white/5 border border-white/10 backdrop-blur-lg p-8 text-left rounded-2xl hover:border-white/20 shadow-md hover:shadow-2xl transition duration-300">
+          <p className="text-green-400 font-semibold text-lg md:text-xl border-b border-white/10 pb-2">
+            Grow
           </p>
-          <h2 className="text-xl md:text-2xl font-bold mt-2">
-            Seamless Deployment & Scaling
+          <h2 className="text-xl md:text-2xl font-bold mt-3 text-white">
+            Launch, Market & Acquire Users
           </h2>
-          <Accordion type="single" collapsible className="w-full mt-4">
-            <AccordionItem value="cloud">
-              <AccordionTrigger>Cloud Hosting</AccordionTrigger>
+          <Accordion type="multiple" className="w-full mt-6 space-y-2">
+            <AccordionItem value="content-marketing">
+              <AccordionTrigger>Content & Brand Marketing</AccordionTrigger>
               <AccordionContent>
-                Deploy on fast, secure cloud platforms like AWS, Vercel, and
-                Cloudflare.
+                We create startup-friendly content strategies for social platforms that build trust and awareness.
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="security">
-              <AccordionTrigger>Security & Performance</AccordionTrigger>
+            <AccordionItem value="social-media">
+              <AccordionTrigger>Platform Growth</AccordionTrigger>
               <AccordionContent>
-                Optimize speed, protect data, and ensure smooth performance.
+                Engage and grow your audience on Instagram, Twitter, LinkedIn, and YouTube with smart strategies.
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="ci-cd">
-              <AccordionTrigger>
-                Continuous Integration & Deployment (CI/CD)
-              </AccordionTrigger>
+            <AccordionItem value="paid-ads">
+              <AccordionTrigger>Performance Marketing</AccordionTrigger>
               <AccordionContent>
-                Automate testing and deployment using CI/CD pipelines for
-                seamless updates and reliability.
+                Run high-converting ad campaigns on Meta, Google, LinkedIn — driven by conversion data, not guesswork.
               </AccordionContent>
             </AccordionItem>
-          </Accordion>
-        </div>
-
-        <div className="p-6 text-left rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-          <p className="text-gray-400 font-semibold text-lg md:text-xl border-b py-2">
-            3. Market
-          </p>
-          <h2 className="text-xl md:text-2xl font-bold mt-2">
-            Reach & Grow Your Audience
-          </h2>
-          <Accordion type="single" collapsible className="w-full mt-4">
-            <AccordionItem value="seo">
-              <AccordionTrigger>SEO & Marketing</AccordionTrigger>
+            <AccordionItem value="launch-support">
+              <AccordionTrigger>Go-to-Market Strategy</AccordionTrigger>
               <AccordionContent>
-                Improve visibility with SEO and digital marketing strategies.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="ads">
-              <AccordionTrigger>Paid Advertising</AccordionTrigger>
-              <AccordionContent>
-                Drive targeted traffic with Google Ads, Meta Ads, and LinkedIn
-                campaigns.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="content-social">
-              <AccordionTrigger>Content & Social Media</AccordionTrigger>
-              <AccordionContent>
-                Build a strong online presence with engaging content marketing
-                and social media strategies tailored to your brand.
+                We help you craft a lean, fast launch — from positioning to launch-day content and feedback loops.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
