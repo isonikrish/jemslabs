@@ -3,10 +3,8 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import { sendGAEvent } from "@next/third-parties/google";
-import { useRouter } from "next/navigation";
 
 function BookACall({ isDefault, size, isFull }: { isDefault: boolean, size: "default" | "sm" | "lg" | "icon" , isFull:boolean}) {
-    const router = useRouter();
 
     const handleButtonClick = () => {
         sendGAEvent("click", {

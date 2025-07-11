@@ -58,7 +58,7 @@ function Hero() {
 
 
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 font-light max-w-2xl leading-relaxed">
-          Got an idea? We'll turn it into a real product.<br />
+          Got an idea? We&apos;ll turn it into a real product.<br />
           From idea to launch and early user growth.
         </p>
 
