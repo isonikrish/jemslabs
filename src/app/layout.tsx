@@ -15,32 +15,33 @@ const urbanist = Urbanist({
 export const metadata: Metadata = {
   title: "Jems Labs - We build your MVP and help it grow",
   description:
-    "From idea to scale - Jems Labs helps founders design, develop, launch, and grow MVPs.",
+    "Jems Labs is your MVP partner for design, development, and launch. We help early-stage startups build fast, validate quickly, and grow with confidence.",
   keywords: [
+    "early-stage startup MVP",
+    "MVP design and development",
     "MVP development agency",
-    "AI-powered MVPs",
-    "startup MVP development",
-    "Next.js development services",
-    "React Native app development",
-    "custom SaaS development",
-    "product design for startups",
-    "full stack MVP development",
-    "OpenAI integration",
-    "AI agent systems",
-    "infrastructure setup",
-    "Cloudflare & Vercel deployment",
-    "growth marketing agency",
-    "performance marketing",
-    "social media growth",
-    "go-to-market for startups",
-    "jems labs",
-    "build and grow MVP",
-    "startup product agency",
+    "startup product studio",
+    "build MVP fast",
+    "AI MVP development",
+    "Next.js MVP services",
+    "React Native MVP",
+    "custom SaaS for startups",
+    "startup launch partner",
+    "idea to MVP",
+    "OpenAI MVP integration",
+    "Cloudflare MVP deployment",
+    "growth partner for startups",
+    "go-to-market strategy",
+    "product growth for startups",
+    "startup branding and launch",
+    "Jems Labs",
+    "MVP validation",
+    "product development"
   ],
   openGraph: {
     title: "Jems Labs - We build your MVP and help it grow",
     description:
-      "From idea to scale - Jems Labs helps founders design, develop, launch, and grow MVPs.",
+    "Jems Labs is your MVP partner for design, development, and launch. We help early-stage startups build fast, validate quickly, and grow with confidence.",
     url: "https://jemslabs.xyz",
     siteName: "Jems Labs",
     images: [
@@ -58,7 +59,7 @@ export const metadata: Metadata = {
     site: "@jems_labs",
     title: "Jems Labs - We build your MVP and help it grow",
     description:
-      "From idea to scale - Jems Labs helps founders design, develop, launch, and grow MVPs.",
+    "Jems Labs is your MVP partner for design, development, and launch. We help early-stage startups build fast, validate quickly, and grow with confidence.",
     images: ["https://jemslabs.xyz/og-image.png"],
   },
   metadataBase: new URL("https://jemslabs.xyz"),
@@ -72,7 +73,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        <meta name="keywords" content="MVP development agency, AI-powered MVPs, startup MVP development, Next.js development services, React Native app development, custom SaaS development, product design for startups, full stack MVP development, OpenAI integration, AI agent systems, infrastructure setup, Cloudflare deployment, Vercel deployment, growth marketing agency, performance marketing, social media growth, go-to-market for startups, Jems Labs, build and grow MVP, startup product agency" />
+        <meta name="keywords" content="MVP development agency, AI-powered MVPs, startup MVP development, Next.js development services, React Native app development, custom SaaS development, product design for startups, full stack MVP development, OpenAI integration, AI agent systems, infrastructure setup, Cloudflare deployment, Vercel deployment, growth marketing agency, performance marketing, social media growth, go-to-market for startups, Jems Labs, build and grow MVP, startup product agency, early-stage startup MVP, MVP design and development, startup product studio, build MVP fast, AI MVP development, startup launch partner, idea to MVP, OpenAI MVP integration, Cloudflare MVP deployment, growth partner for startups, go-to-market strategy, product growth for startups, startup branding and launch, MVP validation, product development" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@jems_labs" />
