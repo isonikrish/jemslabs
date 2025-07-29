@@ -46,7 +46,7 @@ function Services() {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="ai-integration">
-              <AccordionTrigger>AI + Agentic Systems</AccordionTrigger>
+              <AccordionTrigger>AI Integration</AccordionTrigger>
               <AccordionContent>
                 Integrate OpenAI, Gemini, or custom AI models into your product — from chatbots to task automation using agents.
               </AccordionContent>

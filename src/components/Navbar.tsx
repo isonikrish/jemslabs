@@ -45,11 +45,10 @@ function Navbar() {
 
   return (
     <nav
-     className={`fixed top-2 z-50 rounded-xl transition-all duration-500 ease-in-out ${
-      scrolled
+      className={`fixed top-2 z-50 rounded-xl transition-all duration-500 ease-in-out ${scrolled
         ? "left-4 right-4 md:left-24 md:right-24 lg:left-56 lg:right-56 bg-black/60 text-white shadow-md backdrop-blur-lg border"
         : "left-4 right-4 md:left-8 md:right-8 bg-transparent"
-    }`}>
+        }`}>
 
       <div className="w-full flex items-center justify-between transition-all duration-300 px-4 md:px-6 py-3">
 
@@ -62,13 +61,15 @@ function Navbar() {
           <ul className="flex items-center font-medium">
             <li className="cursor-pointer px-4 hover:underline" onClick={() => scrollToSection("products")}>Products</li>
             <li className="cursor-pointer px-4 hover:underline" onClick={() => scrollToSection("services")}>Services</li>
-            <li className="cursor-pointer px-4 hover:underline" onClick={() => scrollToSection("pricing")}>Pricing</li>
-            <li className="cursor-pointer px-4 hover:underline" onClick={() => scrollToSection("opensource")}>Open Source</li>
+            <li className="cursor-pointer px-4 hover:underline" onClick={() => scrollToSection("process")}>Our Process</li>
+            <li className="cursor-pointer px-4 hover:underline" onClick={() => scrollToSection("faq")}>
+              FAQ
+            </li>
           </ul>
         </div>
 
         <div className="hidden md:flex items-center">
-          <BookACall isDefault={true} size="default" isFull={false}/>
+          <BookACall isDefault={true} size="default" isFull={false} />
         </div>
 
         <div className="md:hidden">
@@ -83,9 +84,9 @@ function Navbar() {
           <ul className="flex flex-col gap-4 items-center text-white">
             <li className="cursor-pointer hover:underline border-b w-full py-3" onClick={() => scrollToSection("products")}>Products</li>
             <li className="cursor-pointer hover:underline border-b w-full py-3" onClick={() => scrollToSection("services")}>Services</li>
-            <li className="cursor-pointer hover:underline border-b w-full py-3" onClick={() => scrollToSection("pricing")}>Pricing</li>
-            <li className="cursor-pointer hover:underline border-b w-full py-3" onClick={() => scrollToSection("opensource")}>Open Source</li>
-            <li className="w-full"><BookACall isDefault={true} size="default" isFull={false}/></li>
+            <li className="cursor-pointer hover:underline border-b w-full py-3" onClick={() => scrollToSection("process")}>Our Process</li>
+            <li className="cursor-pointer hover:underline border-b w-full py-3" onClick={() => scrollToSection("faq")}>FAQ</li>
+            <li className="w-full"><BookACall isDefault={true} size="default" isFull={false} /></li>
           </ul>
         </div>
       )}

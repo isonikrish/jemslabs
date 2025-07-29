@@ -20,7 +20,7 @@ function BookACall({ isDefault, size, isFull }: { isDefault: boolean, size: "def
 
 
     return (
-        <Button onClick={handleButtonClick} variant={isDefault ? "default" : "outline"} size={size} className={`group ${isFull ? "w-full": ""} ${isDefault ? "" : "text-white"}`}>Book a Free Call <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" /></Button>
+        <Button onClick={handleButtonClick} variant={isDefault ? "default" : "outline"} size={size} className={`font-semibold group ${isFull ? "w-full": ""} ${isDefault ? "" : "text-white"}`}>Book a Call <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" /></Button>
     );
 }
 

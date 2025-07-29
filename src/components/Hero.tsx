@@ -32,11 +32,11 @@ function Hero() {
 
       <div className="relative z-10 flex flex-col items-center justify-center space-y-6 text-center animate-fade-up">
         <div className="inline-flex items-center px-4 py-2 bg-white/5 rounded-full border border-white/10 backdrop-blur-md shadow-md">
-          <div className="mr-2 text-green-400 text-sm">✨</div>
+          <div className="mr-2 text-green-400 text-sm">🤝</div>
 
 
           <span className="text-sm text-gray-300">
-            Launch your MVP in under 30 days
+            Product partner for startups
           </span>
         </div>
 

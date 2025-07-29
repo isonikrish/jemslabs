@@ -1,7 +1,7 @@
+import FAQSection from "@/components/FAQ";
 import Hero from "@/components/Hero";
-import OpenSource from "@/components/OpenSource";
+import OurProcess from "@/components/OurProcess";
 import OurProducts from "@/components/OurProducts";
-import Pricing from "@/components/Pricing";
 import Services from "@/components/Services";
 
 
@@ -11,8 +11,8 @@ function Home() {
       <Hero />
       <OurProducts />
       <Services />
-      <Pricing />
-      <OpenSource />
+      <OurProcess />
+      <FAQSection />
     </div>
   );
 }
