@@ -2,7 +2,7 @@
 import React from "react";
 import { ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
-import BookACall from "./BookACall";
+import BookASlot from "./BookASlot";
 
 function Hero() {
   const scrollToSection = (id: string) => {
@@ -63,7 +63,7 @@ function Hero() {
         </p>
 
         <div className="flex flex-wrap items-center justify-center pt-6 gap-4">
-          <BookACall isDefault={true} size="lg" isFull={false} />
+          <BookASlot isDefault={true} size="lg" isFull={false} />
           <Button
             size="lg"
             variant="outline"

@@ -1,7 +1,7 @@
 "use client";
 
 import { Check, Flame } from "lucide-react";
-import BookACall from "./BookACall";
+import BookACall from "./BookASlot";
 
 const plans = [
   {
