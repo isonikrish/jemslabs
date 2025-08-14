@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import BookASlot from "./BookASlot";
@@ -69,7 +69,7 @@ function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center">
-          <BookASlot isDefault={true} size="default" isFull={false} />
+          <Suspense fallback={<span>Loading...</span>}><BookASlot isDefault={true} size="default" isFull={false} /></Suspense>
         </div>
 
         <div className="md:hidden">
@@ -86,7 +86,7 @@ function Navbar() {
             <li className="cursor-pointer hover:underline border-b w-full py-3" onClick={() => scrollToSection("services")}>Services</li>
             <li className="cursor-pointer hover:underline border-b w-full py-3" onClick={() => scrollToSection("process")}>Our Process</li>
             <li className="cursor-pointer hover:underline border-b w-full py-3" onClick={() => scrollToSection("faq")}>FAQ</li>
-            <li className="w-full"><BookASlot isDefault={true} size="default" isFull={false} /></li>
+            <li className="w-full"><Suspense fallback={<span>Loading...</span>}><BookASlot isDefault={true} size="default" isFull={false} /></Suspense></li>
           </ul>
         </div>
       )}

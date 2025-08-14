@@ -1,5 +1,5 @@
 "use client"
-import React from "react";
+import React, { Suspense } from "react";
 import { ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
 import BookASlot from "./BookASlot";
@@ -63,7 +63,7 @@ function Hero() {
         </p>
 
         <div className="flex flex-wrap items-center justify-center pt-6 gap-4">
-          <BookASlot isDefault={true} size="lg" isFull={false} />
+          <Suspense fallback={<span>Loading...</span>}><BookASlot isDefault={true} size="lg" isFull={false} /></Suspense>
           <Button
             size="lg"
             variant="outline"
