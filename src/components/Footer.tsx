@@ -18,7 +18,7 @@ function Footer() {
 
         <div className="flex gap-6">
           <a
-            href="https://github.com/Jems-Labs"
+            href="https://github.com/jemslabs"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition"
