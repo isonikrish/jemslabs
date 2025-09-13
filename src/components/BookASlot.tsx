@@ -30,7 +30,7 @@ function BookASlot({ isDefault, size, isFull }: { isDefault: boolean, size: "def
             size={size}
             className={`
             group font-semibold flex items-center gap-2
-            transition-all duration-200
+            duration-200 transition-transform hover:scale-105 active:scale-95
             ${isFull ? "w-full" : ""}
             ${isDefault ? "" : "text-white border border-white hover:bg-white/10"}
         `}>

@@ -3,7 +3,7 @@ import popply from "@/assets/popply.png";
 import swapply from "@/assets/swapply.png";
 export const products = [
   {
-    description: "Swap Your Unused Stuff for What You Love",
+    description: "India's bartering platform",
     image: swapply,
     liveLink: "https://www.swapply.in",
     title: "Swapply"

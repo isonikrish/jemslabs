@@ -1,6 +1,7 @@
 "use client"
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+
 const faqs = [
   {
     question: "Who do you typically work with?",
@@ -28,36 +29,38 @@ const faqs = [
   },
 ]
 
-
 export default function FAQSection() {
-    return (
-        <section
-            id="faq"
-            className="relative border-t min-h-screen w-full py-24 px-6 md:px-12 bg-background text-white text-center overflow-hidden">
-            <div className="absolute inset-0 bg-dots-small opacity-10 pointer-events-none z-0" />
-            <div className="absolute left-[-100px] top-[30%] w-72 h-72 bg-blue-500 opacity-20 rounded-full blur-3xl z-0" />
-            <div className="absolute right-[-100px] top-[70%] w-72 h-72 bg-green-400 opacity-20 rounded-full blur-3xl z-0" />
-            <div className="max-w-3xl mx-auto text-center mb-12 relative">
-                <h2 className="text-3xl md:text-4xl font-bold">FAQs</h2>
-                <p className="text-base md:text-lg text-gray-400 mt-4">
-                    Everything you need to know before getting started.
-                </p>
-            </div>
+  return (
+    <section
+      id="faq"
+      className="relative border-t min-h-screen w-full py-24 px-6 md:px-12 bg-background text-white text-center overflow-hidden"
+    >
+      {/* Only keep dots background */}
+      <div className="absolute inset-0 bg-dots-small opacity-10 pointer-events-none z-0" />
 
-            <Accordion type="single" collapsible className="max-w-3xl mx-auto space-y-4">
-                {faqs.map((faq, index) => (
-                    <AccordionItem key={index} value={`item-${index}`} className="border border-white/10 rounded-xl bg-white/5 backdrop-blur-md transition-all">
-                        <AccordionTrigger className="px-4 py-3 text-left text-white text-base md:text-lg font-medium hover:underline">
-                            {faq.question}
-                        </AccordionTrigger>
-                        <AccordionContent className="px-4 pb-4 pt-1 text-gray-400 text-sm md:text-base text-left">
-                            {faq.answer}
-                        </AccordionContent>
-                    </AccordionItem>
-                ))}
-            </Accordion>
+      <div className="max-w-3xl mx-auto text-center mb-12 relative">
+        <h2 className="text-3xl md:text-4xl font-bold">FAQs</h2>
+        <p className="text-base md:text-lg text-gray-400 mt-4">
+          Everything you need to know before getting started.
+        </p>
+      </div>
 
-            
-        </section>
-    )
+      <Accordion type="single" collapsible className="max-w-3xl mx-auto space-y-4">
+        {faqs.map((faq, index) => (
+          <AccordionItem
+            key={index}
+            value={`item-${index}`}
+            className="border border-white/10 rounded-xl bg-white/5 backdrop-blur-md transition-all"
+          >
+            <AccordionTrigger className="px-4 py-3 text-left text-white text-base md:text-lg font-medium hover:underline">
+              {faq.question}
+            </AccordionTrigger>
+            <AccordionContent className="px-4 pb-4 pt-1 text-gray-400 text-sm md:text-base text-left">
+              {faq.answer}
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </section>
+  )
 }

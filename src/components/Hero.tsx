@@ -107,24 +107,23 @@ function Hero() {
           className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 font-light max-w-2xl leading-relaxed"
         >
           Got an idea? We&apos;ll turn it into a real product.<br />
-          From idea to launch and early user growth.
+          From idea to early user growth.
         </p>
 
-        <div
-          className="flex flex-wrap items-center justify-center pt-6 gap-4"
-        >
+           <div className="flex flex-wrap items-center justify-center pt-6 gap-4">
           <Suspense fallback={<span>Loading...</span>}>
-            <BookASlot isDefault={true} size="lg" isFull={false} />
+            <BookASlot isDefault size="lg" isFull={false} />
           </Suspense>
           <Button
             size="lg"
-            variant="outline"
-            className="hover:border-white/20 hover:bg-white/5 transition-transform hover:scale-105 active:scale-95"
+            variant={"link"}
+            className="hover:scale-105 transition-transform"
             onClick={() => scrollToSection("products")}
           >
-            View Our Work <ChevronRight className="h-4 w-4" />
+            View Work <ChevronRight className="h-4 w-4" />
           </Button>
         </div>
+
       </div>
     </section>
   );

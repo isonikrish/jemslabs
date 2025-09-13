@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -8,8 +9,8 @@ import { products } from "@/lib/products";
 gsap.registerPlugin(ScrollTrigger);
 
 function OurProducts() {
-  const sectionRef = useRef(null);
-  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const cardsRef = useRef<Array<HTMLDivElement | null>>([]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -46,22 +47,6 @@ function OurProducts() {
           },
         }
       );
-
-      // Floating subtle orb movement
-      gsap.to(".orb-left", {
-        y: -40,
-        duration: 5,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-      });
-      gsap.to(".orb-right", {
-        y: 40,
-        duration: 5,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-      });
     }, sectionRef);
 
     return () => ctx.revert();
@@ -73,10 +58,6 @@ function OurProducts() {
       id="products"
       className="relative min-h-screen w-full px-6 md:px-12 py-24 bg-background border-t border-white/10 text-center overflow-hidden"
     >
-      {/* Floating Orbs */}
-      <div className="absolute left-[-80px] top-[25%] w-60 h-60 bg-blue-500 opacity-10 rounded-full blur-2xl z-0 orb-left" />
-      <div className="absolute right-[-80px] bottom-[15%] w-60 h-60 bg-green-400 opacity-10 rounded-full blur-2xl z-0 orb-right" />
-
       {/* Heading */}
       <div className="relative z-10 mb-12 products-heading opacity-0">
         <h2 className="text-3xl md:text-4xl font-bold text-white">
@@ -87,11 +68,13 @@ function OurProducts() {
           real-world solution born from bold concepts.
         </p>
       </div>
+
+      {/* Product Cards */}
       <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto w-full">
         {products.map((product, index) => (
           <div
             key={index}
-            ref={(el) => {
+            ref={(el: HTMLDivElement | null) => {
               cardsRef.current[index] = el;
             }}
             className="opacity-0"
@@ -103,6 +86,7 @@ function OurProducts() {
               liveLink={product.liveLink}
             />
           </div>
+
         ))}
       </div>
     </section>

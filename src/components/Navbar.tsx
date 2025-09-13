@@ -108,7 +108,7 @@ function Navbar() {
               className="cursor-pointer px-4 hover:underline"
               onClick={() => scrollToSection("process")}
             >
-              Our Process
+              Process
             </li>
             <li
               className="cursor-pointer px-4 hover:underline"
@@ -154,7 +154,7 @@ function Navbar() {
               className="cursor-pointer hover:underline border-b w-full py-3"
               onClick={() => scrollToSection("process")}
             >
-              Our Process
+              Process
             </li>
             <li
               className="cursor-pointer hover:underline border-b w-full py-3"
